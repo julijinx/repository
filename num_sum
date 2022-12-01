@@ -1,0 +1,19 @@
+#Напишите функцию num_sum(a), принимающую любое значение. Если это целое число, то возвратить сумму его чисел. В противном случае возвращается фраза «Это не целое число».
+def num_sum():    
+  a = input()    
+  try:          
+    a = float(a)
+    if a - int(a) > 0:
+      print ('Это не целое число')
+    else:
+      a = int(a) 
+      a = str(a)     
+      sum = 0   
+      for i in range(len(a)):    
+        num = int(a[i])
+        sum += num 
+      print(sum)       
+  except ValueError:    
+    print('Это не целое число')
+  
+num_sum()
